@@ -1,0 +1,565 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Untree.co">
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <meta name="description" content="" />
+  <meta name="keywords" content="bootstrap, bootstrap4"/>
+
+  <link href="https://fonts.googleapis.com/css2?family=Display+Playfair:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'https://unicons.iconscout.com/release/v4.0.0/css/line.css' %}">
+
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/jquery.fancybox.min.css' %}">
+  <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+  <link rel="stylesheet" href="{% static 'fonts/flaticon/font/flaticon.css' %}">
+  <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+  <title>Scope India.org</title>
+</head>
+
+<body>
+
+  <div class="site-mobile-menu">
+    <div class="site-mobile-menu-header">
+      <div class="site-mobile-menu-close">
+        <span class="icofont-close js-menu-toggle"></span>
+      </div>
+    </div>
+    <div class="site-mobile-menu-body"></div>
+  </div>
+
+
+  
+  <nav class="site-nav mb-5">
+    <div class="pb-2 top-bar mb-3">
+      <div class="container">
+        <div class="row align-items-center">
+
+          <div class="col-6 col-lg-9">
+            <a href="{% url 'contact' %}" class="small mr-3"><span class="icon-question-circle-o mr-2"></span> <span class="d-none d-lg-inline-block">Have any questions?</span></a> 
+            <a href="tel:+919745936073" class="small mr-3"><span class="icon-phone mr-2"></span> <span class="d-none d-lg-inline-block">9745936073</span></a> 
+            <a href="mailto:info@scopeindia.org" class="small mr-3"><span class="icon-envelope mr-2"></span> <span class="d-none d-lg-inline-block">info@scopeindia.org</span></a> 
+          </div>
+
+          <div class="col-6 col-lg-3 text-right">
+            <a href="{% url 'login' %}" class="small mr-3">
+              <span class="icon-lock"></span>
+              Log In
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="sticky-nav js-sticky-header">
+      <div class="container position-relative">
+        <div class="site-navigation text-center">
+          <a href="{% url 'index' %}" class="logo menu-absolute m-0">SCOPE INDIA<span class="text-primary">.</span></a>
+
+          <ul class="js-clone-nav d-none d-lg-inline-block site-menu">
+            <li class="active"><a href="{% url 'index' %}" >Home</a></li>
+            <li><a href="{% url 'about' %}" >About</a></li>
+            <li><a href="{% url 'contact' %}" >Contact</a></li>
+            <li><a href="{% url 'elements' %}" >Dashboard</a></li>
+          </ul>
+
+          <a href="{% url 'register' %}" class="btn-book btn btn-secondary btn-sm menu-absolute">Register</a>
+
+          <a href="#" class="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-none light" data-toggle="collapse" data-target="#main-navbar">
+            <span></span>
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+
+  <div class="untree_co-hero overlay" style="background-image: url('{% static "images/slider_bg.jpg" %}');">
+
+
+    <div class="container">
+      <div class="row align-items-center justify-content-center">
+
+        <div class="col-12">
+
+          <div class="row justify-content-center ">
+
+            <div class="col-lg-6 text-center ">
+              <img src="{% static 'images/transparent_si1.png' %}" alt="" width="302" height="102">
+              <p class="mb-0" data-aos="fade-up" data-aos-delay="300"><a href="#BTC" class="btn btn-secondary">Explore courses</a></p>
+            </div>
+
+
+          </div>
+
+        </div>
+
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+
+  </div> <!-- /.untree_co-hero -->
+
+
+  <div class="untree_co-section" id="BTC">
+    <div class="container">
+      <div class="row justify-content-center mb-3" >
+        <div class="col-lg-7 text-center" data-aos="fade-up" data-aos-delay="0">
+          <h2 class="line-bottom text-center mb-4" >Browse Top Category</h2>
+        </div>
+      </div>
+      <div class="row align-items-stretch">
+        <div class="col-sm-6 col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="0">
+          <a href="#" class="category d-flex align-items-start h-100">
+            <div>
+            </div>
+            <div>
+              <h3>DevOPS</h3>
+              <span>Revolutionize your career with DevOPS online & offline</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <a href="#" class="category d-flex align-items-start h-100">
+            <div>
+            </div>
+            <div>
+              <h3>ASP.NET Core</h3>
+              <span>Full stack developer certification course in ASP.NET Core </span>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <a href="#" class="category d-flex align-items-start h-100">
+            <div>
+            </div>
+            <div>
+              <h3>Google Flutter</h3>
+              <span>Full stack developer certification course in Google Flutter</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+          <a href="#" class="category d-flex align-items-start h-100">
+            <div>
+            </div>
+            <div>
+              <h3>Cloud Computing</h3>
+              <span>Cloud Computing course in AWS & AZURE</span>
+            </div>
+          </a>
+        </div>
+
+
+        <div class="col-sm-6 col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="0">
+          <a href="#" class="category d-flex align-items-start h-100">
+            <div>
+            </div>
+            <div>
+              <h3>Java</h3>
+              <span>Full stack developer certification course in Java</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <a href="#" class="category d-flex align-items-start h-100">
+            <div>
+            </div>
+            <div>
+              <h3>Python</h3>
+              <span>Full stack developer certification course in Python</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <a href="#" class="category d-flex align-items-start h-100">
+            <div>
+            </div>
+            <div>
+              <h3>MERN/MEAN</h3>
+              <span>MERN or MEAN stack developer cerification course</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+          <a href="#" class="category d-flex align-items-start h-100">
+            <div>
+            </div>
+            <div>
+              <h3>PHP</h3>
+              <span>Full stack developer certification course in PHP</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="400">
+        <div class="col-lg-8 text-center">
+          <p>We have more category here. <a href="#BII">Browse all</a></p>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+  <div class="services-section">
+    <div class="container">
+      <div class="row justify-content-between">
+        <div class="col-lg-4 mb-5 mb-lg-0">
+
+          <div class="section-title mb-3" data-aos="fade-up" data-aos-delay="0">
+            <h2 class="line-bottom mb-4">We are open</h2>
+          </div>
+
+          <p data-aos="fade-up" data-aos-delay="100">SCOPE INDIA is open 365 days a year, We are open 7 days 24hrs to talk to you and listen to your queries</p>
+
+          <ul class="ul-check list-unstyled mb-5 primary" data-aos="fade-up" data-aos-delay="200">
+            <li>Best Classes</li>
+            <li>Trained Faculties</li>
+            <li>Placement Assistance</li>
+          </ul>
+
+          <p data-aos="fade-up" data-aos-delay="300"><a href="{% url 'register' %}" class="btn btn-primary">Get Started</a></p>
+
+        </div>
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="0">
+          <figure class="img-wrap-2">
+            <img src="{% static 'images/scopeindia.jpg' %}" alt="Image" class="img-fluid" style="padding-top:100px;">
+            <div class="dotted"></div>
+          </figure>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="untree_co-section" id="BII">
+    <div class="container"> 
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-7 text-center" data-aos="fade-up" data-aos-delay="0">
+          <h2 class="line-bottom text-center mb-4">Best in Industry</h2>
+          <p>We provide you every courses at an affordable rate and assistance for your career opportunities</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature">
+            <img src="{% static 'images/si_aws.jpg' %}" alt="Image" class="img-fluid">
+          </div>
+        </div>
+        <div class="col-6 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature">
+            <img src="{% static 'images/si_java.jpg' %}" alt="Image" class="img-fluid">
+          </div>
+        </div>
+        <div class="col-6 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="feature">
+            <img src="{% static 'images/si_python.jpg' %}" alt="Image" class="img-fluid">
+          </div>
+        </div>
+        <div class="col-6 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature">
+            <img src="{% static 'images/si_php.jpg' %}" alt="Image" class="img-fluid">
+          </div>
+        </div>
+        <div class="col-6 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature">
+            <img src="{% static 'images/si_mean.jpg' %}" alt="Image" class="img-fluid">
+          </div>
+        </div>
+        <div class="col-6 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="feature">
+            <img src="{% static 'images/si_flutter.jpg' %}" alt="Image" class="img-fluid">
+          </div>
+        </div>
+        <div class="col-6 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature">
+            <img src="{% static 'images/si_azure.jpg' %}" alt="Image" class="img-fluid">
+          </div>
+        </div>
+        <div class="col-6 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature">
+            <img src="{% static 'images/si_php.jpg' %}" alt="Image" class="img-fluid">
+          </div>
+        </div>
+        <div class="col-6 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="feature">
+            <img src="{% static 'images/si_digital.jpg' %}" alt="Image" class="img-fluid">
+          </div>
+        </div>
+      </div>
+      </div>
+    </div> <!-- /.container -->
+  </div> <!-- /.untree_co-section -->
+
+  <div class="untree_co-section bg-light">
+    <div class="container"> 
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-7 text-center" data-aos="fade-up" data-aos-delay="0">
+          <h2 class="line-bottom text-center mb-4">Categories</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-sm-6 col-md-6 col-lg-4 mb-4 mb-lg-0">
+          <div class="custom-media">
+            <a href="https://scopeindia.org/scope-india-placement-cell"><img src="{% static 'images/placement2.jpg' %}" alt="Image" class="img-fluid"></a>
+            <div class="custom-media-body">
+              <div class="d-flex justify-content-between pb-3">
+                <div class="text-primary"><span class="uil uil-book-open"></span> <span></span></div>
+                <div class="review"><span class="icon-star"></span> <span></span></div>
+              </div>
+              <h3>Recent Placements</h3>
+              <div class="border-top d-flex justify-content-between pt-3 mt-3 align-items-center">
+                <div><span class="price">Scope India</span></div>
+                <div><a href="https://scopeindia.org/scope-india-placement-cell">Learn More</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-6 col-lg-4 mb-4 mb-lg-0">
+          <div class="custom-media">
+            <a href="https://scopeindia.org/software-networking-cloud-courses-scope-india"><img src="{% static 'images/courses2.jpg' %}" alt="Image" class="img-fluid"></a>
+            <div class="custom-media-body">
+              <div class="d-flex justify-content-between pb-3">
+                <div class="text-primary"><span class="uil uil-book-open"></span> <span></span></div>
+                <div class="review"><span class="icon-star"></span> <span></span></div>
+              </div>
+              <h3>Courses</h3>
+              <div class="border-top d-flex justify-content-between pt-3 mt-3 align-items-center">
+                <div><span class="price">Scope India</span></div>
+                <div><a href="https://scopeindia.org/software-networking-cloud-courses-scope-india">Learn More</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-6 col-lg-4 mb-4 mb-lg-0">
+          <div class="custom-media">
+            <a href="{% url 'register' %}"><img src="{% static 'images/register.webp' %}" alt="Image" class="img-fluid"></a>
+            <div class="custom-media-body">
+              <div class="d-flex justify-content-between pb-3">
+                <div class="text-primary"><span class="uil uil-book-open"></span> <span></span></div>
+                <div class="review"><span class="icon-star"></span> <span></span></div>
+              </div>
+              <h3>Register Now</h3>
+              <div class="border-top d-flex justify-content-between pt-3 mt-3 align-items-center">
+                <div><span class="price">Scope India</span></div>
+                <div><a href="{% url 'register' %}">Learn More</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="untree_co-section pt-0 bg-img overlay" style="background-image: url('{% static "images/slider_bg.jpg" %}');">
+    <div class="container">
+      <div class="row align-items-center justify-content-center text-center">
+        <div class="col-lg-7">
+          <h2 class="text-white mb-3" data-aos="fade-up" data-aos-delay="0">SCOPE INDIA, your career partner!</h2>
+          <p class="text-white h5 mb-4" data-aos="fade-up" data-aos-delay="100">Google 4.9 rated institute</p>
+          <p><a href="{% url 'login' %}" class="btn btn-secondary" data-aos="fade-up" data-aos-delay="200">Already registered?</a></p>
+        </div>
+      </div>
+    </div>  
+  </div> <!-- /.untree_co-section -->
+
+  <div class="untree_co-section">
+    <div class="container">
+      <div class="row justify-content-between">
+        <div class="col-lg-5 mb-5">
+          <h2 class="line-bottom mb-4" data-aos="fade-up" data-aos-delay="0">About Us</h2>
+          <p data-aos="fade-up" data-aos-delay="100">One of India's best Training destinations for Software, Networking, and Cloud Computing courses with 17 years of Industrial experience.
+            Software, Networking, and Cloud Professional Education Centre in Kerala and Tamil Nadu from Suffix E Solutions with WORKING PROFESSIONALS oriented on-the-job TRAINING model. SCOPE INDIA provides courses for Software Programming in Python (Data Science | Artificial Intelligence | Machine Learning | Deep Learning, Data Analytics), Java, PHP, .Net, MERN,Software Testing Manual and Automation, Cloud Computing (AWS | Azure), Server Administration (MicroSoft MCSE | Linux RHCE), Networking (CCNA), DevOps, Mobile App Development in Flutter, and Digital Marketing. 
+            This is how SCOPE INDIA can support both newbies and those experienced in the industry to upgrade their skills</p>
+          <ul class="list-unstyled ul-check mb-5 primary" data-aos="fade-up" data-aos-delay="200">
+            <li>Training with a 100% Trusted Job-Based Internship Model.</li>
+            <li>SCOPE INDIA has a Strong Placement Cell that provides jobs to thousands of students annually.</li>
+            <li>We assure you, you won't regret it after training from SCOPE INDIA!</li>
+          </ul>
+
+          <div class="row count-numbers mb-5">
+            <div class="col-4 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+              <span class="counter d-block"><span data-number="1000">0</span><span>+</span></span>
+              <span class="caption-2">Students are trained every year</span>
+            </div>
+            <div class="col-4 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+              <span class="counter d-block"><span data-number="30">0</span><span>+</span></span>
+              <span class="caption-2">Computer courses</span>
+            </div>
+            <div class="col-4 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+              <span class="counter d-block"><span data-number="95"></span><span>%</span></span>
+              <span class="caption-2">Students are getting placed every year</span>
+            </div>
+          </div>
+
+          <p data-aos="fade-up" data-aos-delay="200">
+            <a href="{% url 'register' %}" class="btn btn-primary mr-1">Admission</a>
+            <a href="{% url 'contact' %}" class="btn btn-outline-primary">Any doubts?</a>
+          </p>
+        </div>
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="bg-1"></div>
+          <a href="{% static 'images/videoplayback.mp4' %}" data-fancybox class="video-wrap">
+            <span class="play-wrap"><span class="icon-play"></span></span>
+            <img src="{% static 'images/sd2.jpg' %}" alt="Image" class="img-fluid rounded">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div> <!-- /.untree_co-section -->
+
+  <div class="untree_co-section bg-light">
+    <div class="container">
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-7 text-center" data-aos="fade-up" data-aos-delay="0">
+          <h2 class="line-bottom text-center mb-4">Our Programs</h2>
+          <p>We provide :</p>
+        </div>
+      </div>
+      <div class="row align-items-stretch">
+        <div class="col-lg-6"  data-aos="fade-up" data-aos-delay="100">
+          <div class="media-h d-flex h-100">
+            <figure>
+              <img src="{% static 'images/training.avif' %}" alt="Image">
+            </figure>
+            <div class="media-h-body">
+              <h2 class="mb-3"><a href="#BII">Training</a></h2>
+              <p>
+                You are trained under Suffix E Solutions working professionals, on-the-job training model.</p>
+              <p><a href="#BII">Learn More</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6"  data-aos="fade-up" data-aos-delay="100">
+          <div class="media-h d-flex h-100">
+            <figure>
+              <img src="{% static 'images/intern.avif' %}" alt="Image">
+            </figure>
+            <div class="media-h-body">
+              <h2 class="mb-3"><a href="#BII">Internship</a></h2>
+              <p>After course completion, you will be proceeded to live projects with a 6 months experience certificate.</p>
+              <p><a href="#BII">Learn More</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6"  data-aos="fade-up" data-aos-delay="100">
+          <div class="media-h d-flex h-100">
+            <figure>
+              <img src="{% static 'images/settings.avif' %}" alt="Image">
+            </figure>
+            <div class="media-h-body">
+              <h2 class="mb-3"><a href="#BII">Grooming</a></h2>
+              <p>CV Preparation, Interview Preparation, and Personality Development.
+              </p>
+              <p><a href="#BII">Learn More</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6"  data-aos="fade-up" data-aos-delay="200">
+          <div class="media-h d-flex h-100">
+            <figure>
+              <img src="{% static 'images/placement1.avif' %}" alt="Image">
+            </figure>
+            <div class="media-h-body">
+              <h2 class="mb-3"><a href="#BII">Placement</a></h2>
+              <p> Gives 100% FREE placement support to all our fellow techies through SCOPE INDIA's Placement Cell.</p>
+              <p><a href="#BII">Learn More</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> <!-- /.untree_co-section -->
+
+
+  <div class="site-footer" style="background-color: #00155e;">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <img src="https://scopeindia.org/images/snowpark-footer-logo.png" style="width: 450px;height: 94px;"/>
+          <div class="col-md-12" style="color: #bbc2d5;margin-top: 10px;">Center for Software, Networking, & Cloud Education</div>
+          <address style="color: #bbc2d5;">Kerala: Technopark TVM | Thampanoor TVM | Kaloor Kochi, Tamil Nadu: Distillery Road | Palace Road Nagercoil</address>
+          <div class="widget">
+            <ul class="list-unstyled social" style="padding-left:10px; padding-top:20px">
+              <li><a href="https://www.facebook.com/scopeindia.org/"target="_blank"><span class="icon-facebook"></span></a></li>
+              <li><a href="https://www.instagram.com/scopeindia/?hl=en"target="_blank"><span class="icon-instagram"></span></a></li>
+              <li><a href="https://www.youtube.com/channel/UCBwCN7naCxcrc2cranNbIpA"target="_blank"><span class="icon-youtube"></span></a></li>
+              <li><a href="https://wa.me/919745936073"target="_blank"><span class="icon-whatsapp"></span></a></li>
+              <li><a href="https://www.linkedin.com/company/scope-india-software-and-networking-education/posts/?feedView=all"target="_blank"><span class="icon-linkedin"></span></a></li>
+            </ul>
+          </div> 
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 text-center">
+          <img src="https://scopeindia.org/images/iso_iaflogo.png" height="140px" width="500px"/>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 text-center">
+          <p style="color: #bbc2d5;text-align: center;font-size: 16px;margin-top: 10px;">An ISO 9001:2015 Certified Company</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 text-center">
+           <p style="text-align:center;color: #bbc2d5 ;">All Rights Reserved <a style="color: rgb(255, 255, 255);;" target="_blank" href="https://www.suffixesolutions.com/" title="A trusted IT Partner"> Suffix E Solutions </a>© 2007-2025</p>
+        </div>
+      </div>
+
+      <div class="row justify-content-center text-center mt-3">
+        <div class="col-sm-2">
+            <a style="color: rgb(255, 255, 255);" href="tel:+919745936073">9745936073 (TPK)</a>
+        </div>
+        <div class="col-sm-2">
+            <a style="color: rgb(255, 255, 255);" href="tel:+919745936073">9745936073 (TVM)</a>
+        </div>
+        <div class="col-sm-2">
+            <a style="color: rgb(255, 255, 255);" href="tel:+917592939481">7592939481 (EKM)</a>
+        </div>
+        <div class="col-sm-2">
+            <a style="color: rgb(255, 255, 255);" href="tel:+918075536185">8075536185 (NGL)</a>
+        </div>
+        <div class="col-sm-2">
+            <a style="color: rgb(255, 255, 255);" href="mailto:info@scopeindia.org">info@scopeindia.org</a>
+        </div>
+      </div>
+    
+    </div>
+    </div>
+  </div>
+
+    <div id="overlayer"></div>
+    <div class="loader">
+      <div class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+
+    <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/jquery.animateNumber.min.js' %}"></script>
+    <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'js/jquery.fancybox.min.js' %}"></script>
+    <script src="{% static 'js/jquery.sticky.js' %}"></script>
+    <script src="{% static 'js/aos.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+
+  </body>
+
+  </html>

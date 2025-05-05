@@ -1,0 +1,495 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Untree.co">
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <meta name="description" content="" />
+  <meta name="keywords" content="bootstrap, bootstrap4" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Display+Playfair:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="{% static 'https://unicons.iconscout.com/release/v4.0.0/css/line.css' %}">
+
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/jquery.fancybox.min.css' %}">
+  <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+  <link rel="stylesheet" href="{% static 'fonts/flaticon/font/flaticon.css' %}">
+  <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+  <title>Scope India.org</title>
+</head>
+
+<body>
+
+  <div class="site-mobile-menu">
+    <div class="site-mobile-menu-header">
+      <div class="site-mobile-menu-close">
+        <span class="icofont-close js-menu-toggle"></span>
+      </div>
+    </div>
+    <div class="site-mobile-menu-body"></div>
+  </div>
+
+
+  
+  <nav class="site-nav mb-5">
+    <div class="pb-2 top-bar mb-3">
+      <div class="container">
+        <div class="row align-items-center">
+
+          <div class="col-6 col-lg-9">
+            <a href="{% url 'contact' %}" class="small mr-3"><span class="icon-question-circle-o mr-2"></span> <span class="d-none d-lg-inline-block">Have any questions?</span></a> 
+            <a href="tel:+919745936073" class="small mr-3"><span class="icon-phone mr-2"></span> <span class="d-none d-lg-inline-block">9745936073</span></a> 
+            <a href="mailto:info@scopeindia.org" class="small mr-3"><span class="icon-envelope mr-2"></span> <span class="d-none d-lg-inline-block">info@scopeindia.org</span></a> 
+          </div>
+
+          <div class="col-6 col-lg-3 text-right">
+            <a href="{% url 'login' %}" class="small mr-3">
+              <span class="icon-lock"></span>
+              Log In
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="sticky-nav js-sticky-header">
+      <div class="container position-relative">
+        <div class="site-navigation text-center">
+          <a href="{% url 'index' %}" class="logo menu-absolute m-0">SCOPE INDIA<span class="text-primary">.</span></a>
+
+          <ul class="js-clone-nav d-none d-lg-inline-block site-menu">
+            <li><a href="{% url 'index' %}" >Home</a></li>
+            <li><a href="{% url 'about' %}" >About</a></li>
+            <li><a href="{% url 'contact' %}" >Contact</a></li>
+            <li class="active"><a href="{% url 'elements' %}" >Dashboard</a></li>
+          </ul>
+
+          <a href="{% url 'register' %}" class="btn-book btn btn-secondary btn-sm menu-absolute">Register</a>
+
+          <a href="#" class="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-none light" data-toggle="collapse" data-target="#main-navbar">
+            <span></span>
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </nav>
+
+    <div class="untree_co-hero inner-page overlay" style="background-image: url('{% static "images/si_bgblue.jpg" %}');">
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-12">
+            <div class="row justify-content-center ">
+              <div class="col-lg-6 text-center ">
+                <h1 class="mb-4 heading text-white" data-aos="fade-up" data-aos-delay="100">Student Dashboard</h1>
+                <div>              
+                  <p class="mb-0" data-aos="fade-up" data-aos-delay="300"><a href="#Explore" class="btn btn-secondary">Explore courses</a>
+                  <a href="{% url 'profile' %}" class="btn btn-secondary">Profile</a></p>
+                </div>
+                <div>
+                  <p class="mb-0" data-aos="fade-up" data-aos-delay="300"><a href="{% url 'changepassword' %}" class="btn btn-secondary">Change password</a>
+                    <a href="{% url 'logout' %}" class="btn btn-secondary">Logout</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- /.row -->
+      </div> <!-- /.container -->
+    </div> 
+
+
+  <div class="untree_co-section" id="Explore">
+    <div class="container">
+      <div class="row justify-content-center mb-3">
+        <div class="col-lg-7 text-center" data-aos="fade-up" data-aos-delay="0">
+          <h2 class="line-bottom text-center mb-4">Software Programming Courses</h2>
+        </div>
+      </div>
+      <div class="row align-items-stretch">
+        <div class="col-sm-6 col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="0">
+          <a href="#" class="category d-flex align-items-start h-100" onclick="confirmSignup(event, 'Java Full Stack Internship')">
+            <div>
+            </div>
+            <div>
+              <h3>Java Full Stack Internship</h3>
+              <span>4 months course + 3 months on the Job Training</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <a href="#" class="category d-flex align-items-start h-100" onclick="confirmSignup(event, 'Python Full Stack Internship')">
+            <div>
+            </div>
+            <div>
+              <h3>Python Full Stack Internship</h3>
+              <span>4 months course + 3 months on the Job Training</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <a href="#" class="category d-flex align-items-start h-100" onclick="confirmSignup(event, 'PHP Full Stack Internship')">
+            <div>
+            </div>
+            <div>
+              <h3>PHP Full Stack Internship</h3>
+              <span>4 months course + 3 months on the Job Training</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+          <a href="#" class="category d-flex align-items-start h-100" onclick="confirmSignup(event, '.Net Core Full Stack Internship')">
+            <div>
+            </div>
+            <div>
+              <h3>.Net Core Full Stack Internship</h3>
+              <span>4 months course + 3 months on the Job Training</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="0">
+          <a href="#" class="category d-flex align-items-start h-100" onclick="confirmSignup(event, 'MERN Full Stack Internship')">
+            <div>
+            </div>
+            <div>
+              <h3>Mern Full Stack Internship</h3>
+              <span>4 months course + 3 months on the Job Training</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <a href="#" class="category d-flex align-items-start h-100" onclick="confirmSignup(event, 'MEAN Full Stack Internship')">
+            <div>
+            </div>
+            <div>
+              <h3>MEAN Full Stack Internship</h3>
+              <span>4 months course + 3 months on the Job Training</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <a href="#" class="category d-flex align-items-start h-100" onclick="confirmSignup(event, 'Flutter - Android - iOS Mobile App Internship')">
+            <div>
+            </div>
+            <div>
+              <h3>Flutter - Android - iOS Mobile App Internship</h3>
+              <span>3 months course + 3 months on the Job Training</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+          <a href="#" class="category d-flex align-items-start h-100" onclick="confirmSignup(event, 'IONIC - Android - iOS Mobile App Internship')">
+            <div>
+            </div>
+            <div>
+              <h3>IONIC - Android - iOS Mobile App Internship</h3>
+              <span>3 months course + 3 months on the Job Training</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+          <a href="#" class="category d-flex align-items-start h-100" onclick="confirmSignup(event, 'UI/UX Designing Training')">
+            <div>
+            </div>
+            <div>
+              <h3>UI/UX Designing Training</h3>
+              <span>3 months course + 1 months on the Job Training</span>
+            </div>
+          </a>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div> 
+
+    <div class="container">
+      <div class="row justify-content-center mb-3">
+        <div class="col-lg-7 text-center" data-aos="fade-up" data-aos-delay="0">
+          <h2 class="line-bottom text-center mb-4">Software Testing Courses</h2>
+        </div>
+      </div>
+      <div class="row align-items-stretch">
+        <div class="col-sm-6 col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="0">
+          <a href="#" class="category d-flex align-items-start h-100" onclick="confirmSignup(event, 'Software Testing Advanced Internship')">
+            <div>
+            </div>
+            <div>
+              <h3>Software Testing Advanced Internship</h3>
+              <span>4 months course + 3 months on the Job Training</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="row justify-content-center mb-3">
+        <div class="col-lg-7 text-center" data-aos="fade-up" data-aos-delay="0">
+          <h2 class="line-bottom text-center mb-4">Networking, Server, & Cloud</h2>
+        </div>
+      </div>
+      <div class="row align-items-stretch">
+        <div class="col-sm-6 col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="0">
+          <a href="#" class="category d-flex align-items-start h-100" onclick="confirmSignup(event, 'Networking, Server, & Cloud Internship')">
+            <div>
+            </div>
+            <div>
+              <h3>Networking, Server, & Cloud Internship</h3>
+              <span>8 months course + 3 months on the Job Training</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <a href="#" class="category d-flex align-items-start h-100" onclick="confirmSignup(event, 'AWS Certified Solutions Architect Associate Internship')">
+            <div>
+            </div>
+            <div>
+              <h3>AWS Certified Solutions Architect Associate Internship</h3>
+              <span>40hrs course + 1 month on the Job Training</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <a href="#" class="category d-flex align-items-start h-100" onclick="confirmSignup(event, 'Azure Cloud Administrator AZ-104')">
+            <div>
+            </div>
+            <div>
+              <h3>Azure Cloud Administrator AZ-104</h3>
+              <span>40hrs course + 1 month on the Job Training</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+          <a href="#" class="category d-flex align-items-start h-100" onclick="confirmSignup(event, 'Red Hat Certified System Administrator (RHCSA) Internship')">
+            <div>
+            </div>
+            <div>
+              <h3>Red Hat Certified System Administrator (RHCSA) Internship</h3>
+              <span>100hrs course + 1 month on the Job Training</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="0">
+          <a href="#" class="category d-flex align-items-start h-100" onclick="confirmSignup(event, 'Red Hat Certified Engineer (RHCE) Internship')">
+            <div>
+            </div>
+            <div>
+              <h3>Red Hat Certified Engineer (RHCE) Internship</h3>
+              <span>40hrs course + 1 month on the Job Training</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <a href="#" class="category d-flex align-items-start h-100" onclick="confirmSignup(event, 'DevOps Internship')">
+            <div>
+            </div>
+            <div>
+              <h3>DevOps Internship</h3>
+              <span>6 months course + 3 month on the Job Training</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <a href="#" class="category d-flex align-items-start h-100" onclick="confirmSignup(event, 'Cisco Certified Network Associate - CCNA 200-301')">
+            <div>
+            </div>
+            <div>
+              <h3>Cisco Certified Network Associate - CCNA 200-301</h3>
+              <span>80hrs course</span>
+            </div>
+          </a>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row justify-content-center mb-3">
+        <div class="col-lg-7 text-center" data-aos="fade-up" data-aos-delay="0">
+          <h2 class="line-bottom text-center mb-4">Other Courses</h2>
+        </div>
+      </div>
+      <div class="row align-items-stretch">
+        <div class="col-sm-6 col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="0">
+          <a href="#" class="category d-flex align-items-start h-100" onclick="confirmSignup(event, 'Data Science & AI')">
+            <div>
+            </div>
+            <div>
+              <h3>Data Science & AI</h3>
+              <span>6 months course + 3 months on the Job Training</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <a href="#" class="category d-flex align-items-start h-100" onclick="confirmSignup(event, 'Data Analytics')">
+            <div>
+            </div>
+            <div>
+              <h3>Data Analytics</h3>
+              <span>3 months course + 3 months on the Job Training</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <a href="#" class="category d-flex align-items-start h-100" onclick="confirmSignup(event, 'Digital Marketing Course & Internship')">
+            <div>
+            </div>
+            <div>
+              <h3>Digital Marketing Course & Internship</h3>
+              <span>3 months course + 3 months on the Job Training</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+          <a href="#" class="category d-flex align-items-start h-100" onclick="confirmSignup(event, 'Microsoft Power BI Course')">
+            <div>
+            </div>
+            <div>
+              <h3>Microsoft Power BI Course</h3>
+              <span>60hrs course + 1 month on the Job Training</span>
+            </div>
+          </a>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center mt-4">
+      <div class="col-lg-8">
+          <h3 class="text-center mb-3">Signed-up Courses</h3>
+          <div class="table-responsive">
+              <table class="table table-bordered table-striped text-center">
+                <thead class="table-dark">
+                  <tr>
+                      <th>#</th>
+                      <th>Course Name</th>
+                  </tr>
+                </thead>
+                  <tbody id="signedUpCourses">
+                  </tbody>
+              </table>
+          </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="site-footer" style="background-color: #00155e;">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <img src="https://scopeindia.org/images/snowpark-footer-logo.png" style="width: 450px;height: 94px;"/>
+          <div class="col-md-12" style="color: #bbc2d5;margin-top: 10px;">Center for Software, Networking, & Cloud Education</div>
+          <address style="color: #bbc2d5;">Kerala: Technopark TVM | Thampanoor TVM | Kaloor Kochi, Tamil Nadu: Distillery Road | Palace Road Nagercoil</address>
+          <div class="widget">
+            <ul class="list-unstyled social" style="padding-left:10px; padding-top:20px">
+              <li><a href="https://www.facebook.com/scopeindia.org/"target="_blank"><span class="icon-facebook"></span></a></li>
+              <li><a href="https://www.instagram.com/scopeindia/?hl=en"target="_blank"><span class="icon-instagram"></span></a></li>
+              <li><a href="https://www.youtube.com/channel/UCBwCN7naCxcrc2cranNbIpA"target="_blank"><span class="icon-youtube"></span></a></li>
+              <li><a href="https://wa.me/919745936073"target="_blank"><span class="icon-whatsapp"></span></a></li>
+              <li><a href="https://www.linkedin.com/company/scope-india-software-and-networking-education/posts/?feedView=all"target="_blank"><span class="icon-linkedin"></span></a></li>
+            </ul>
+          </div> 
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 text-center">
+          <img src="https://scopeindia.org/images/iso_iaflogo.png" height="140px" width="500px"/>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 text-center">
+          <p style="color: #bbc2d5;text-align: center;font-size: 16px;margin-top: 10px;">An ISO 9001:2015 Certified Company</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 text-center">
+           <p style="text-align:center;color: #bbc2d5 ;">All Rights Reserved <a style="color: rgb(255, 255, 255);;" target="_blank" href="https://www.suffixesolutions.com/" title="A trusted IT Partner"> Suffix E Solutions </a>© 2007-2025</p>
+        </div>
+      </div>
+
+      <div class="row justify-content-center text-center mt-3">
+        <div class="col-sm-2">
+            <a style="color: rgb(255, 255, 255);" href="tel:+919745936073">9745936073 (TPK)</a>
+        </div>
+        <div class="col-sm-2">
+            <a style="color: rgb(255, 255, 255);" href="tel:+919745936073">9745936073 (TVM)</a>
+        </div>
+        <div class="col-sm-2">
+            <a style="color: rgb(255, 255, 255);" href="tel:+917592939481">7592939481 (EKM)</a>
+        </div>
+        <div class="col-sm-2">
+            <a style="color: rgb(255, 255, 255);" href="tel:+918075536185">8075536185 (NGL)</a>
+        </div>
+        <div class="col-sm-2">
+            <a style="color: rgb(255, 255, 255);" href="mailto:info@scopeindia.org">info@scopeindia.org</a>
+        </div>
+      </div>
+    
+    </div>
+    </div>
+  </div>
+
+    <div id="overlayer"></div>
+    <div class="loader">
+      <div class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+
+    <script>
+      let signedUpCourses = new Set();
+  
+      function confirmSignup(event, courseName) {
+          event.preventDefault(); // Prevents link from navigating
+  
+          if (!signedUpCourses.has(courseName)) {
+              signedUpCourses.add(courseName);
+              alert(`You have successfully signed up for ${courseName}!`);
+              updateSignedUpList();
+          } else {
+              alert(`You have already signed up for ${courseName}.`);
+          }
+      }
+  
+      function updateSignedUpList() {
+        const tableBody = document.getElementById('signedUpCourses');
+        tableBody.innerHTML = ""; // Clear previous list
+        let index = 1;
+    
+        signedUpCourses.forEach(course => {
+            const row = document.createElement('tr');
+            row.innerHTML = `<td>${index++}</td><td>${course}</td>`;
+            tableBody.appendChild(row);
+        });
+    }    
+  </script>
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/jquery.animateNumber.min.js' %}"></script>
+    <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'js/jquery.fancybox.min.js' %}"></script>
+    <script src="{% static 'js/jquery.sticky.js' %}"></script>
+    <script src="{% static 'js/aos.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+    <script src="{% static 'js/countries.js' %}"></script>
+
+  </body>
+
+  </html>

@@ -1,0 +1,281 @@
+<!-- /*
+* Template Name: Learner
+* Template Author: Untree.co
+* Tempalte URI: https://untree.co/
+* License: https://creativecommons.org/licenses/by/3.0/
+*/ -->
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Untree.co">
+  <link rel="shortcut icon" href="{% static 'favicon.png' %}">
+
+  <meta name="description" content="" />
+  <meta name="keywords" content="bootstrap, bootstrap4" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Display+Playfair:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="{% static 'https://unicons.iconscout.com/release/v4.0.0/css/line.css' %}">
+
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/jquery.fancybox.min.css' %}">
+  <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+  <link rel="stylesheet" href="{% static 'fonts/flaticon/font/flaticon.css' %}">
+  <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+  <title>Scope India.org</title>
+</head>
+
+<body>
+
+  <div class="site-mobile-menu">
+    <div class="site-mobile-menu-header">
+      <div class="site-mobile-menu-close">
+        <span class="icofont-close js-menu-toggle"></span>
+      </div>
+    </div>
+    <div class="site-mobile-menu-body"></div>
+  </div>
+
+
+  
+  <nav class="site-nav mb-5">
+    <div class="pb-2 top-bar mb-3">
+      <div class="container">
+        <div class="row align-items-center">
+
+          <div class="col-6 col-lg-9">
+            <a href="{% url 'contact' %}" class="small mr-3"><span class="icon-question-circle-o mr-2"></span> <span class="d-none d-lg-inline-block">Have any questions?</span></a> 
+            <a href="tel:+919745936073" class="small mr-3"><span class="icon-phone mr-2"></span> <span class="d-none d-lg-inline-block">9745936073</span></a> 
+            <a href="mailto:info@scopeindia.org" class="small mr-3"><span class="icon-envelope mr-2"></span> <span class="d-none d-lg-inline-block">info@scopeindia.org</span></a> 
+          </div>
+
+          <div class="col-6 col-lg-3 text-right">
+            <a href="{% url 'login' %}" class="small mr-3">
+              <span class="icon-lock"></span>
+              Log In
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="sticky-nav js-sticky-header">
+      <div class="container position-relative">
+        <div class="site-navigation text-center">
+          <a href="{% url 'index' %}" class="logo menu-absolute m-0">SCOPE INDIA<span class="text-primary">.</span></a>
+
+          <ul class="js-clone-nav d-none d-lg-inline-block site-menu">
+            <li><a href="{% url 'index' %}" >Home</a></li>
+            <li><a href="{% url 'about' %}" >About</a></li>
+            <li><a href="{% url 'contact' %}" >Contact</a></li>
+            <li><a href="{% url 'elements' %}" >Dashboard</a></li>
+          </ul>
+
+          <a href="{% url 'register' %}" class="btn-book btn btn-secondary btn-sm menu-absolute">Register</a>
+
+          <a href="#" class="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-none light" data-toggle="collapse" data-target="#main-navbar">
+            <span></span>
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+
+  <div class="untree_co-hero inner-page overlay" style="background-image: url('{% static "images/si_bgblue.jpg" %}');">
+    <div class="container">
+      <div class="row align-items-center justify-content-center">
+        <div class="col-12">
+          <div class="row justify-content-center ">
+            <div class="col-lg-6 text-center ">
+              <h1 class="mb-4 heading text-white" data-aos="fade-up" data-aos-delay="100">Register</h1>
+
+            </div>
+          </div>
+        </div>
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+
+  </div> <!-- /.untree_co-hero -->
+
+
+
+
+  <div class="untree_co-section">
+    <div class="container">
+      <div class="row mb-5 justify-content-center" style="margin-top: 12.25rem !important;">
+        <div class="col-lg-12 mx-auto order-1">
+          <form action={% url 'register' %} class="form-box" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert {% if message.tags == 'success' %}alert-success{% else %}alert-danger{% endif %}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+
+            <div class="row">
+              <div class="col-6">
+                <div class="col-12 mb-3">
+                  <input type="text" class="form-control" name="fname" placeholder="First Name" required>
+                </div>
+                <div class="col-12 mb-3">
+                  <input type="text" class="form-control" name="lname" placeholder="Last Name" required>
+                </div>
+                <div class="col-12 mb-3">Gender
+                  <div class="form-control">
+                  <input type="radio" id="male" name="gender" value="M" required>
+                    <label for="male">Male</label>
+                  <input type="radio" id="female" name="gender" value="F">
+                    <label for="female">Female</label>
+                  <input type="radio" id="other" name="gender" value="O">
+                    <label for="other">Other</label>
+                  </div>
+                </div>
+                <div class="col-12 mb-3">Date of Birth
+                  <input type="date" class="form-control" name="dob" placeholder="Date of Birth" required>
+                </div>
+                <div class="col-12 mb-3">
+                  <input type="mail" class="form-control" name="email" placeholder="Email" required>
+                </div>
+                <div class="col-12 mb-3">Avatar
+                  <input type="file" class="form-control" name="avatar" placeholder="Upload avatar" required>
+                </div>
+              </div>
+            
+
+            <div class="col-6">
+             <div class="col-12 mb-3">
+                <input type="text" class="form-control" name="ph_no" placeholder="Phone No." required>
+             </div>
+              <div class="col-12 mb-3">Country               
+                  <select id="country" name="country" class="form-control" required>
+                    <option value="">Select the country</option>
+                  </select>                
+              </div>
+              <div class="col-12 mb-3">State               
+                <select id="state" name="state" class="form-control" disabled required>
+                  <option value="">Select the state</option>
+                </select>                
+              </div>
+              <div class="col-12 mb-3">City       
+                <select id="city" name="city" class="form-control" disabled required>
+                  <option value="">Select the city</option>
+                </select>                
+              </div>
+              <div class="col-12 mb-3">Hobbies<br>
+                <div class="form-control">
+                <input type="checkbox" id="sports" name="hobbies" value="sports">
+                <label for="sports"> Sports </label>
+                <input type="checkbox" id="travel" name="hobbies" value="travel">
+                <label for="travel"> Travel </label>
+                <input type="checkbox" id="coding" name="hobbies" value="coding">
+                <label for="coding"> Coding </label>
+                <input type="checkbox" id="others" name="hobbies" value="others">
+                <label for="others"> Others </label><br>
+                </div>
+                
+              </div>
+        
+              <div class="col-12">
+                <input type="submit" value="Register" class="btn btn-primary">
+              </div>
+
+            </div>
+            </div>
+          </form>
+        </div>
+      </div>  
+    </div>
+  </div> <!-- /.untree_co-section -->
+
+  <div class="site-footer" style="background-color: #00155e;">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <img src="https://scopeindia.org/images/snowpark-footer-logo.png" style="width: 450px;height: 94px;"/>
+          <div class="col-md-12" style="color: #bbc2d5;margin-top: 10px;">Center for Software, Networking, & Cloud Education</div>
+          <address style="color: #bbc2d5;">Kerala: Technopark TVM | Thampanoor TVM | Kaloor Kochi, Tamil Nadu: Distillery Road | Palace Road Nagercoil</address>
+          <div class="widget">
+            <ul class="list-unstyled social" style="padding-left:10px; padding-top:20px">
+              <li><a href="https://www.facebook.com/scopeindia.org/"target="_blank"><span class="icon-facebook"></span></a></li>
+              <li><a href="https://www.instagram.com/scopeindia/?hl=en"target="_blank"><span class="icon-instagram"></span></a></li>
+              <li><a href="https://www.youtube.com/channel/UCBwCN7naCxcrc2cranNbIpA"target="_blank"><span class="icon-youtube"></span></a></li>
+              <li><a href="https://wa.me/919745936073"target="_blank"><span class="icon-whatsapp"></span></a></li>
+              <li><a href="https://www.linkedin.com/company/scope-india-software-and-networking-education/posts/?feedView=all"target="_blank"><span class="icon-linkedin"></span></a></li>
+            </ul>
+          </div> 
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 text-center">
+          <img src="https://scopeindia.org/images/iso_iaflogo.png" height="140px" width="500px"/>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 text-center">
+          <p style="color: #bbc2d5;text-align: center;font-size: 16px;margin-top: 10px;">An ISO 9001:2015 Certified Company</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 text-center">
+           <p style="text-align:center;color: #bbc2d5 ;">All Rights Reserved <a style="color: rgb(255, 255, 255);;" target="_blank" href="https://www.suffixesolutions.com/" title="A trusted IT Partner"> Suffix E Solutions </a>© 2007-2025</p>
+        </div>
+      </div>
+      <div class="row justify-content-center text-center mt-3">
+        <div class="col-sm-2">
+            <a style="color: rgb(255, 255, 255);" href="tel:+919745936073">9745936073 (TPK)</a>
+        </div>
+        <div class="col-sm-2">
+            <a style="color: rgb(255, 255, 255);" href="tel:+919745936073">9745936073 (TVM)</a>
+        </div>
+        <div class="col-sm-2">
+            <a style="color: rgb(255, 255, 255);" href="tel:+917592939481">7592939481 (EKM)</a>
+        </div>
+        <div class="col-sm-2">
+            <a style="color: rgb(255, 255, 255);" href="tel:+918075536185">8075536185 (NGL)</a>
+        </div>
+        <div class="col-sm-2">
+            <a style="color: rgb(255, 255, 255);" href="mailto:info@scopeindia.org">info@scopeindia.org</a>
+        </div>
+      </div>
+    
+    </div>
+    </div>
+  </div>
+    <div id="overlayer"></div>
+    <div class="loader">
+      <div class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+
+    <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/jquery.animateNumber.min.js' %}"></script>
+    <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'js/jquery.fancybox.min.js' %}"></script>
+    <script src="{% static 'js/jquery.sticky.js' %}"></script>
+    <script src="{% static 'js/aos.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+    <script src="{% static 'js/countries.js' %}"></script>
+
+  </body>
+
+  </html>
